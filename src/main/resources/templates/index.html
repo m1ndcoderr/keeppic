@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>KeepPic</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<!-- Head elements -->
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1 class="display-3">KeepPic</h1>
+        <p class="lead">A reliable keeper of your images.</p>
+        <hr class="my-4"/>
+        <a class="btn btn-primary btn-lg" href="#" th:href="@{/}" role="button">Main</a>
+        <a class="btn btn-primary btn-lg" href="#" th:href="@{/toabout}" role="button">About</a>
+        <a class="btn btn-primary btn-lg" href="#" th:href="@{/torules}" role="button">Rules</a>
+        <a class="btn btn-primary btn-lg" href="#" th:href="@{/toloaded}" role="button">My images</a>
+    </div>
+</div>
+<!-- Main container for upload form -->
+<div class="container">
+
+    <div class="card border-light mb-3 text-center" style="max-width: 20rem; float: none; margin: 0 auto;">
+        <div class="card-header">Quick image upload</div>
+        <div class="card-body">
+            <h4 class="card-title">Choose image(s):</h4>
+            <form action="#" th:action="@{/upload}" method="post" enctype="multipart/form-data">
+                <p><input type="file" name="files[]" multiple="multiple" accept="image"/></p>
+                <p><input type="submit" value="Ok"/></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="mt-5 py-4 text-center">
+    <div class="container">
+        <span class="text-muted">KeepPic - fast and free hosting of posters, screenshots, photos and other images for forums.</span>
+    </div>
+</footer>
+</body>
+</html>
